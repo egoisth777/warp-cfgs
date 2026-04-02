@@ -1,7 +1,7 @@
 # Create symlink from warp-themes sub-repo to Warp's theme data directory.
 # Usage: set_config.ps1 (no args — paths are relative to script location)
 
-$ThemesSource = (Resolve-Path "$PSScriptRoot\..\..\warp-themes").Path
+$ThemesSource = Join-Path "$PSScriptRoot" "..\..\warp-themes"
 $WarpTarget = "$env:LOCALAPPDATA\warp\Warp\data\themes"
 
 if (-not (Test-Path $ThemesSource)) {
