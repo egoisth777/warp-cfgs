@@ -1,6 +1,6 @@
 #!/bin/sh
 # Create symlink from warp-themes sub-repo to Warp's theme data directory.
-# Usage: set_config.sh (no args — paths are relative to script location)
+# Usage: init.sh (no args — paths are relative to script location)
 set -e
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"

@@ -1,8 +1,8 @@
 # Create symlink from warp-themes sub-repo to Warp's theme data directory.
-# Usage: set_config.ps1 (no args — paths are relative to script location)
+# Usage: init.ps1 (no args — paths are relative to script location)
 
 $ThemesSource = Join-Path "$PSScriptRoot" "..\..\warp-themes"
-$WarpTarget = "$env:LOCALAPPDATA\warp\Warp\data\themes"
+$WarpTarget = "$env:APPDATA\warp\Warp\data\themes"
 
 if (-not (Test-Path $ThemesSource)) {
     Write-Host "ERROR: warp-themes not found at $ThemesSource — run init.py first"
